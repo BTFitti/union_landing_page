@@ -30,9 +30,13 @@ export function Header() {
             ))}
           </div>
 
-          <button className="hidden lg:flex bg-gradient-to-tr from-purple-600 to-blue-800 text-white xl:px-16 xl:py-4 text-2xl rounded-lg font-semibold">
-            Junte-se a nós
-          </button>
+          <div className="shadow-xl xl:flex xl:w-fit xl:rounded-md xl:bg-gradient-to-r xl:from-purple-600 xl:to-blue-600 xl:p-[0.20rem] xl:transition-all xl:ease-in xl:duration-200 z-10 space-x-6">
+            <a href="#">
+              <button className="hidden lg:flex relative bg-transparent text-white xl:px-16 xl:py-4 text-2xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left  before:scale-x-0 before:bg-[rgb(18,17,25)] before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100">
+                Junte-se a nós
+              </button>
+            </a>
+          </div>
         </nav>
       </header>
     </div>
