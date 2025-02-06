@@ -9,7 +9,6 @@
 }
 body {
   background-color: #1f1d2b;
-
 }
 /* hover:bg-gradient-to-t hover:from-white hover:to-white hover:text-zinc-800 transition-all hover:shadow-2xl hover:shadow-white  */
 .teste:hover {
@@ -25,8 +24,4 @@ body {
     rgba(0, 0, 0, 1) 100%
   );
   color: black;
-
-}
-.teste2 {
-  z-index: -9999;
 }
