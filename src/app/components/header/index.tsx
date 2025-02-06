@@ -1,13 +1,32 @@
 import Image from "next/image";
 import logoUnion from "../../../../public/logo-union-developers.svg";
 export function Header() {
+ 
   const textHeader = [
-    "Sobre",
-    "Pilares",
-    "Benefícios",
-    "Etapas",
-    "Depoimentos",
-    "Dúvidas",
+    {
+      name: "Sobre",
+      id: "#sobre",
+    },
+    {
+      name: "Pilares",
+      id: "#pilares",
+    },
+    {
+      name: "Benefícios",
+      id: "#beneficios",
+    },
+    {
+      name: "Etapas",
+      id: "#etapas",
+    },
+    {
+      name: "Depoimentos",
+      id: "#testimonials",
+    },
+    {
+      name: "Dúvidas",
+      id: "#duvidas",
+    },
   ];
 
   return (
@@ -18,13 +37,13 @@ export function Header() {
             <Image src={logoUnion} alt="Logo UD" />
           </a>
           <div className="flex items-center justify-center text-gray-300 text-2xl font-bold gap-4  ">
-            {textHeader.map((texto) => (
+            {textHeader.map((items) => (
               <ul className=" items-center justify-center hidden lg:flex ">
                 <a
-                  href="#"
+                  href={items.id}
                   className="hover:bg-gradient-to-r from-purple-600 to to-blue-600 hover:text-transparent bg-clip-text transition-all ease-out duration-300"
                 >
-                  <li>{texto}</li>
+                  <li>{items.name}</li>
                 </a>
               </ul>
             ))}

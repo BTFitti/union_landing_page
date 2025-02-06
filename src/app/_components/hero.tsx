@@ -22,7 +22,7 @@ export function Hero() {
           </p>
           <div className="shadow-xl items-center justify-center flex w-full  xl:w-fit rounded-md bg-gradient-to-r from-purple-600 to-blue-600 xl:p-[0.20rem] xl:transition-all xl:ease-in xl:duration-200 z-10 space-x-6 ">
             <a href="#">
-              <button className="  lg:flex relative px-10 py-3 text-white xl:px-16 xl:py-4 text-2xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left  before:scale-x-0 before:bg-[rgb(18,17,25)]  before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100">
+              <button className="lg:flex relative px-10 py-3 text-white xl:px-16 xl:py-4 text-2xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left  before:scale-x-0 before:bg-[rgb(18,17,25)]  before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100">
                 Quero participar
               </button>
             </a>
