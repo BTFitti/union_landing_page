@@ -32,7 +32,7 @@ export function Hero() {
 
         <Image
           src={uiImage}
-          className="hidden xl:flex ml-10"
+          className="hidden xl:flex ml-10 animate-float"
           alt="Um octógono com três pontos, representando a união dos desenvolvedores"
         />
       </div>

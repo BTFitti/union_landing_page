@@ -3,11 +3,9 @@ import { About } from "./_components/about";
 
 export default function Home() {
   return (
-    
-      <div>
-        <Hero />
-        <About />
-      </div>
-    
+    <div>
+      <Hero />
+      <About />
+    </div>
   );
 }

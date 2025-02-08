@@ -7,6 +7,8 @@ import Planet from "../../../public/planet.svg";
 import Like from "../../../public/like.svg";
 import Lamp from "../../../public/bulb_on.svg";
 import Profile from "../../../public/profile-2.svg";
+import Logo from "../../../public/WayysMB8RQyrgcahBMQs.svg";
+
 export function About() {
   const pilars = [
     {
@@ -23,11 +25,11 @@ export function About() {
     },
   ];
   return (
-    <div className="w-full max-w-[80rem] mx-auto flex flex-col items-center justify-center px-3  ">
+    <div className="w-full  mx-auto flex flex-col items-center justify-center  ">
       {/* section sobre */}
       <section
         id="sobre"
-        className="mt-32 flex bg-gradient-to-r from-custom2 to-custom1 rounded-xl relative after:bg-gradient-to-t after:from-custom2 after:to-custom1 after:content-[''] after:absolute after:-bottom-14 after:left-1/2 after:top-auto  after:w-2 after:h-14  after:bg-red-50 "
+        className="mt-32 max-w-[80rem] flex bg-gradient-to-r from-custom2 to-custom1 rounded-xl relative after:bg-gradient-to-t after:from-custom2 after:to-custom1 after:content-[''] after:absolute after:-bottom-14 after:left-1/2 after:top-auto  after:w-2 after:h-14  after:bg-red-50 "
       >
         <header className="absolute bg-[#1F1D2B] left-5 xl:left-20 -top-5 xl:-top-8 px-1">
           <h2 className="text-3xl xl:text-5xl font-semibold bg-gradient-to-r from-purple-600 to-blue-800 text-transparent bg-clip-text z-30">
@@ -55,7 +57,7 @@ export function About() {
       </section>
 
       {/* section pilares */}
-      <section className="mt-32 flex-col flex items-center justify-center w-full bg-gradient-to-b from-custom2 via-custom1 to-transparent rounded-xl relative p-1 mb-32 z-[-22] ">
+      <section className="mt-32 max-w-[80rem] flex-col flex items-center justify-center w-full bg-gradient-to-b from-custom2 via-custom1 to-transparent rounded-xl relative p-1 mb-32 z-[-22] ">
         <header className="absolute bg-[#1F1D2B] -top-5 xl:-top-8 px-1">
           <div className=" bg-gradient-to-r  from-purple-600 to-blue-800 text-transparent bg-clip-text z-30">
             <h2 className="text-3xl xl:text-5xl font-semibold">Pilares</h2>
@@ -93,7 +95,7 @@ export function About() {
       </section>
 
       {/*seção dos benefícios */}
-      <section className="w-full max-w-7xl flex flex-col mt-[5rem] ">
+      <section className="w-full max-w-[80rem]  flex flex-col mt-[5rem] ">
         <div className="flex items-center justify-center w-full gap-5 xl:gap-10">
           <div className="bg-gradient-to-r from-custom2 to-custom1 w-full h-1 mt-1 xl:mt-2 flex items-center justify-center  rounded-xl"></div>
           <h2 className="  text-3xl xl:text-5xl font-bold bg-gradient-to-r from-purple-600  to-blue-800 text-transparent bg-clip-text ">
@@ -245,8 +247,8 @@ export function About() {
       </section>
 
       {/*seção das etapas*/}
-      <section className="w-full max-w-7xl flex flex-col mt-[5rem] ">
-        <div className="flex items-center justify-center w-full gap-5 xl:gap-10">
+      <section className="w-full max-w-[80rem]  flex flex-col mt-[5rem] px-10 ">
+        <div className="flex items-center  justify-center w-full gap-5 xl:gap-10">
           <div className="bg-gradient-to-r from-custom2 to-custom1 w-full h-1 mt-1 xl:mt-2 flex items-center justify-center  rounded-xl"></div>
           <h2 className="  text-3xl xl:text-5xl font-bold bg-gradient-to-r from-purple-600  to-blue-800 text-transparent bg-clip-text ">
             Etapas
@@ -258,91 +260,88 @@ export function About() {
         </p>
 
         {/*area das etapas */}
-        <div className=" h-screen mt-[8rem] mx-auto w-full max-w-7xl relative ">
+        <div className=" mt-[8rem] mx-auto w-full max-w-7xl  h-screen relative mb-96 xl:mb-20 ">
           <div className="flex w-full h-full ">
-            <ol className="w-full  flex flex-col gap-5 z-[9999]">
-              <li className="flex">
+            <ol className="w-full flex flex-col   gap-5 ">
+              <li className="flex items-center justify-start">
                 <div
-                  className="bg-custom5 rounded-xl w-[20rem] xl:w-[27.2rem] px-24 py-10 h-[16.1rem] relative flex items-center justify-center shadow-custom-shadow  
-                xl:after:content-[''] xl:after:absolute xl:after:w-56 xl:after:h-[0.22rem] xl:after:bg-test2 xl:after:top-0 xl:after:-right-[12.2rem]  
-                 xl:after:z-[-9999]
+                  className="bg-custom5 rounded-xl z-[99999] w-[15rem] xl:w-[27.2rem] px-12 xl:px-24 py-10 h-[16.1rem] relative flex  items-center justify-center shadow-custom-shadow  
+                xl:after:content-[''] xl:after:absolute xl:after:w-56 xl:after:h-[0.22rem] xl:after:bg-test2 xl:after:top-0 xl:after:-right-[10.5rem]  
+                 
                 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-[63px] before:z-[1] before:bg-no-repeat before:bg-[url(https://res.cloudinary.com/dbnq26wqe/image/upload/v1689446863/union/border-top-desktop_vdpwro.svg)]
                   "
                 >
-                  <span className="text-[14rem] absolute -left-14 font-bold bg-test text-transparent bg-clip-text">
+                  <span className="text-[10rem] absolute -left-10  xl:text-[14rem] xl:absolute  xl:-left-14 font-bold bg-test text-transparent bg-clip-text">
                     1
                   </span>
                   <div className="text-center inline-flex flex-col gap-5 ">
-                    <h3 className="text-3xl font-extrabold text-white/80">
+                    <h3 className="text-xl xl:text-3xl font-extrabold text-white/80">
                       Pré-inscrição
                     </h3>
-                    <p className="text-2xl text-white/80 text-center">
+                    <p className="text-md xl:text-2xl text-white/80 text-center">
                       Inicie a sua inscrição preenchendo o nosso formulário
                     </p>
                   </div>
                 </div>
               </li>
-
-              <li className=" flex justify-end items-end">
+              <li className="flex items-center justify-end">
                 <div
-                  className="bg-custom5 rounded-xl w-[20rem] xl:w-[27.2rem] py-10 h-[16.1rem] relative flex items-center justify-center shadow-custom-shadow 
-                xl:after:content-[''] xl:after:absolute xl:after:w-56 xl:after:h-[0.22rem] xl:after:bg-test2 xl:after:top-0 xl:after:-left-[12.1rem] 
-                 
+                  className="bg-custom5 rounded-xl w-[15rem] xl:w-[27.2rem] px-12 xl:px-24 py-10 h-[16.1rem] relative flex  items-center justify-center shadow-custom-shadow2 
+                xl:after:content-[''] xl:after:absolute xl:after:w-56 xl:after:h-[0.22rem] xl:after:bg-test2 xl:after:top-0 xl:after:-left-[10rem]  
+                 xl:after:z-[-9999]
                 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-[63px] before:z-[1] before:bg-no-repeat before:bg-[url(https://res.cloudinary.com/dbnq26wqe/image/upload/v1689446863/union/border-top-desktop_vdpwro.svg)]
-                "
+                  "
                 >
-                  <span className="text-[14rem] absolute -left-24 font-bold bg-test text-transparent bg-clip-text">
+                  <span className="text-[10rem] absolute -left-10  xl:text-[14rem] xl:absolute  xl:-left-14 font-bold bg-test text-transparent bg-clip-text">
                     2
                   </span>
-                  <div className="flex flex-col gap-5 text-center items-center justify-center">
-                    <h3 className="text-3xl font-extrabold text-white/80">
+                  <div className="text-center inline-flex flex-col gap-5 ">
+                    <h3 className="text-xl xl:text-3xl font-extrabold text-white/80">
                       Análise do formulário
                     </h3>
-                    <p className="text-2xl text-white/80 ">
+                    <p className="text-md xl:text-2xl text-white/80 text-center">
                       O nosso time irá analisar suas informações
                     </p>
                   </div>
                 </div>
               </li>
-
-              <li className="flex">
+              <li className="flex items-center justify-start">
                 <div
-                  className="bg-custom5 rounded-xl w-[20rem] xl:w-[27.2rem] px-24 py-10 h-[16.1rem] relative flex items-center justify-center shadow-custom-shadow  
-                xl:after:content-[''] xl:after:absolute xl:after:w-56 xl:after:h-[0.22rem] xl:after:bg-test2 xl:after:top-0 xl:after:-right-[12.2rem]  
-                 xl:after:z-[-9999]
+                  className="bg-custom5 rounded-xl w-[15rem] xl:w-[27.2rem] px-12 xl:px-24 py-10 h-[16.1rem] relative flex  items-center justify-center shadow-custom-shadow  
+                xl:after:content-[''] xl:after:absolute xl:after:w-56 xl:after:h-[0.22rem] xl:after:bg-test2 xl:after:top-0 xl:after:-right-[10.5rem]  xl:after:z-[-9999]
+                 
                 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-[63px] before:z-[1] before:bg-no-repeat before:bg-[url(https://res.cloudinary.com/dbnq26wqe/image/upload/v1689446863/union/border-top-desktop_vdpwro.svg)]
                   "
                 >
-                  <span className="text-[14rem] absolute -left-14 font-bold bg-test text-transparent bg-clip-text">
+                  <span className="text-[10rem] absolute -left-10  xl:text-[14rem] xl:absolute  xl:-left-14 font-bold bg-test text-transparent bg-clip-text">
                     3
                   </span>
                   <div className="text-center inline-flex flex-col gap-5 ">
-                    <h3 className="text-3xl font-extrabold text-white/80">
+                    <h3 className="text-xl xl:text-3xl font-extrabold text-white/80">
                       Desafio técnico
                     </h3>
-                    <p className="text-2xl text-white/80 text-center">
+                    <p className="text-md xl:text-2xl text-white/80 text-center">
                       Após a análise você receberá um desafio prático
                     </p>
                   </div>
                 </div>
               </li>
-
-              <li className=" flex justify-end items-end">
+              <li className="flex items-center justify-end">
                 <div
-                  className="bg-custom5 rounded-xl w-[20rem] xl:w-[27.2rem] py-10 h-[16.1rem] relative flex items-center justify-center shadow-custom-shadow 
-                xl:after:content-[''] xl:after:absolute xl:after:w-56 xl:after:h-[0.22rem] xl:after:bg-test2 xl:after:top-0 xl:after:-left-[12.1rem] 
-                 
+                  className="bg-custom5 rounded-xl w-[15rem] xl:w-[27.2rem] px-12 xl:px-24 py-10 h-[16.1rem] relative flex  items-center justify-center shadow-custom-shadow2 
+                xl:after:content-[''] xl:after:absolute xl:after:w-56 xl:after:h-[0.25rem] xl:after:bg-test2 xl:after:top-0 xl:after:-left-[10rem]  
+                 xl:after:z-[-9999]
                 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-[63px] before:z-[1] before:bg-no-repeat before:bg-[url(https://res.cloudinary.com/dbnq26wqe/image/upload/v1689446863/union/border-top-desktop_vdpwro.svg)]
-                "
+                  "
                 >
-                  <span className="text-[14rem] absolute -left-24 font-bold bg-test text-transparent bg-clip-text">
+                  <span className="text-[10rem] absolute -left-10  xl:text-[14rem] xl:absolute  xl:-left-14 font-bold bg-test text-transparent bg-clip-text">
                     4
                   </span>
-                  <div className="flex flex-col p-10 gap-5 text-center items-center justify-center">
-                    <h3 className="text-3xl font-extrabold text-white/80">
+                  <div className="text-center inline-flex flex-col gap-5 ">
+                    <h3 className="text-xl xl:text-3xl font-extrabold text-white/80">
                       Entrevista
                     </h3>
-                    <p className="text-2xl text-white/80 ">
+                    <p className="text-md xl:text-2xl text-white/80 text-center">
                       Nessa fase iremos bater um papo para que possamos conhecer
                       melhor você
                     </p>
@@ -351,20 +350,34 @@ export function About() {
               </li>
             </ol>
           </div>
-          <div className="w-[0.32rem] h-[calc(100%_-_8.2rem)] absolute bg-test top-0 rounded-br-xl z-[-9999] rounded-bl-xl left-1/2 right-1/2"></div>
+          <div className="w-[0.32rem] h-[160%] xl:h-[calc(100%_-_8.2rem)] absolute bg-test top-0  z-[-9999]  left-1/2 right-1/2"></div>
         </div>
       </section>
-      {/* <li className="">
-                <div className="bg-custom5 flex w-[12rem] rounded-lg p-5">
-                  <span className="text-7xl relative -left-[50px]">1</span>
-                  <div className="flex flex-col gap-5 text-center justify-center">
-                    <h3>Pré-inscrição</h3>
-                    <p>Inicie a sua inscrição preenchendo o nosso formulário</p>
-                  </div>
-                </div>
-              </li> */}
 
-      {/* before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:bg-gradient-to-r before:from-custom3 before:to-custom3 */}
+      <section className="w-full mx-auto   bg-[url(https://media.graphassets.com/zqzyqOSd6RG6uFM2Rdgx)] bg-cover ">
+        <div className=" w-full max-w-7xl  mx-auto">
+          <div className=" w-full xl:flex xl:items-center xl:justify-center  h-[50rem] pt-32 xl:pt-0 px-5">
+            <div className="bg-custom3 flex flex-col xl:h-[20rem] h-full rounded-xl w-full xl:flex xl:flex-row xl:items-center  xl:justify-center ">
+              <Image src={Logo} alt="Logo do site" className="animate-float" />
+              <div className="w-full flex flex-col items-center gap-5 xl:p-10 pt-1 ">
+                <h2 className="text-3xl xl:text-4xl w-full max-w-xl text-center text-white/80 font-bold">
+                  Vivencia na prática, ambiente imersivo, desafios e muito mais!
+                </h2>
+                <h3 className=" text-2xl text-pretty xl:text-3xl font-bold text-red-400 text-center animate-pulse">
+                  Inscreva-se já! Vagas limitadas
+                </h3>
+                <div className="shadow-xl flex   items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-blue-600 p-[0.20rem] transition-all ease-in duration-200 z-10 space-x-6">
+                  <a href="#">
+                    <button className=" lg:flex relative bg-transparent text-white px-5 py-2 xl:px-20 xl:py-4 text-2xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left  before:scale-x-0 before:bg-custom3 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100">
+                      Inscrever-se agora
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
