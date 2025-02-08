@@ -14,13 +14,21 @@ export default {
         custom1: "#0048fe",
         custom2: "#851d86",
         custom3: "#1F1D2B",
-        custom4: "#4333C2"
+        custom4: "#4333C2",
+        custom5: "#121119"
       },
       backgroundImage:{
         heroImg: "url('/hero-desktop-v2.jpg')",
-        myGradient: "linear-gradient(225deg, rgba(0, 72, 254, 0.1) 0%, rgba(133, 29, 134, 0.1) 100%);"
+        myGradient: "linear-gradient(225deg, rgba(0, 72, 254, 0.1) 0%, rgba(133, 29, 134, 0.1) 100%);",
+        pipe:  "linear-gradient(320deg, rgb(31, 29, 43) 0%, rgba(31, 29, 43, 0) 100%);",
+        test: "linear-gradient(75deg, rgb(0, 72, 254) 0%, rgb(133, 29, 134) 100%);",
+        test2: "linear-gradient(75deg, rgb(0, 72, 254) -55%, rgb(133, 29, 134) 100%);"
       },
+      boxShadow:{
+        "custom-shadow": 'rgba(133, 29, 134, 0.4) 0px 0px 30px 0px'
+      }
     },
+    
   },
   plugins: [],
 } satisfies Config;
