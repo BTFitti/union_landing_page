@@ -29,7 +29,7 @@ export function About() {
       {/* section sobre */}
       <section
         id="sobre"
-        className="mt-32 max-w-[80rem] flex bg-gradient-to-r from-custom2 to-custom1 rounded-xl relative after:bg-gradient-to-t after:from-custom2 after:to-custom1 after:content-[''] after:absolute after:-bottom-14 after:left-1/2 after:top-auto  after:w-2 after:h-14  after:bg-red-50 "
+        className="mt-32 max-w-[80rem] mx-4  flex bg-gradient-to-r from-custom2 to-custom1 rounded-xl relative after:bg-gradient-to-t after:from-custom2 after:to-custom1 after:content-[''] after:absolute after:-bottom-14 after:left-1/2 after:top-auto  after:w-2 after:h-14  after:bg-red-50 "
       >
         <header className="absolute bg-[#1F1D2B] left-5 xl:left-20 -top-5 xl:-top-8 px-1">
           <h2 className="text-3xl xl:text-5xl font-semibold bg-gradient-to-r from-purple-600 to-blue-800 text-transparent bg-clip-text z-30">
@@ -57,39 +57,41 @@ export function About() {
       </section>
 
       {/* section pilares */}
-      <section className="mt-32 max-w-[80rem] flex-col flex items-center justify-center w-full bg-gradient-to-b from-custom2 via-custom1 to-transparent rounded-xl relative p-1 mb-32 z-[-22] ">
-        <header className="absolute bg-[#1F1D2B] -top-5 xl:-top-8 px-1">
-          <div className=" bg-gradient-to-r  from-purple-600 to-blue-800 text-transparent bg-clip-text z-30">
-            <h2 className="text-3xl xl:text-5xl font-semibold">Pilares</h2>
-          </div>
-        </header>
+      <section className="mt-32 max-w-[80rem] mx-4 ">
+        <div className=" flex-col flex items-center justify-center w-full  bg-gradient-to-b from-custom2 via-custom1 to-transparent rounded-xl relative p-1 mb-32 z-[-22]">
+          <header className="absolute bg-[#1F1D2B]  -top-5 xl:-top-8 px-1">
+            <div className=" bg-gradient-to-r   from-purple-600 to-blue-800 text-transparent bg-clip-text z-30">
+              <h2 className="text-3xl xl:text-5xl font-semibold">Pilares</h2>
+            </div>
+          </header>
 
-        <div className="flex flex-col w-full">
-          <div className="bg-[#1F1D2B] py-5 px-4 xl:py-10 xl:px-5 rounded-t-xl ">
-            <p className="xl:text-3xl text-white/80 text-center">
-              Os pilares que sustentam o formato inovador de aprendizagem do
-              Union é a junção de incríveis metodologias!
-            </p>
-          </div>
+          <div className="flex flex-col w-full ">
+            <div className="bg-[#1F1D2B] py-5 px-4  xl:py-10 xl:px-5 rounded-t-xl ">
+              <p className="xl:text-3xl text-white/80 text-center">
+                Os pilares que sustentam o formato inovador de aprendizagem do
+                Union é a junção de incríveis metodologias!
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 xl:grid-cols-3 gap-10  bg-[#1F1D2B] pt-[6rem] -m-[0.25rem] relative ">
-            {/* cards */}
-            {pilars.map((content) => (
-              <div className="w-full flex flex-col h-full ">
-                <header className="bg-gradient-to-r h-32 w-full from-custom2 to-custom1 flex items-center justify-center rounded-t-xl">
-                  <h1 className="text-4xl text-white/80 font-bold">
-                    {content.header}
-                  </h1>
-                </header>
-                <section className=" bg-myGradient w-full rounded-b-xl flex-grow ">
-                  <div className="flex p-5">
-                    <p className="text-lg text-center text-white/80  ">
-                      {content.text}
-                    </p>
-                  </div>
-                </section>
-              </div>
-            ))}
+            <div className="grid grid-cols-1 xl:grid-cols-3 gap-10  px-5 xl:px-0 bg-[#1F1D2B] pt-[6rem] -m-[0.25rem] relative ">
+              {/* cards */}
+              {pilars.map((content) => (
+                <div className="w-full flex flex-col h-full ">
+                  <header className="bg-gradient-to-r h-32 w-full from-custom2 to-custom1 flex items-center justify-center rounded-t-xl">
+                    <h1 className="text-4xl text-white/80 font-bold">
+                      {content.header}
+                    </h1>
+                  </header>
+                  <section className=" bg-myGradient w-full rounded-b-xl flex-grow ">
+                    <div className="flex p-5">
+                      <p className="text-lg text-center text-white/80  ">
+                        {content.text}
+                      </p>
+                    </div>
+                  </section>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
