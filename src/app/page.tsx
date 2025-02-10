@@ -1,6 +1,10 @@
 import { Hero } from "./_components/hero";
 import { About } from "./_components/about";
 import { Testimonials } from "./_components/testimonials";
+import { Teste } from "./_components/test";
+
+
+
 
 export default function Home() {
   return (
@@ -8,6 +12,10 @@ export default function Home() {
       <Hero />
       <About />
       <Testimonials/>
+      
+      
+      
+     
     </div>
   );
 }

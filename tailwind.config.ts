@@ -36,8 +36,8 @@ export default {
           "50%": { transform: "translateY(-10px)" },
         },
       },
-      animation:{
-        float: 'float 2s ease-in-out infinite',
+      animation: {
+        float: "float 2s ease-in-out infinite",
       },
     },
   },
