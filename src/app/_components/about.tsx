@@ -356,7 +356,7 @@ export function About() {
         </div>
       </section>
 
-      <section className="w-full mx-auto   bg-[url(https://media.graphassets.com/zqzyqOSd6RG6uFM2Rdgx)] bg-cover ">
+      <section className="w-full mx-auto bg-[url(https://media.graphassets.com/zqzyqOSd6RG6uFM2Rdgx)] bg-cover ">
         <div className=" w-full max-w-7xl  mx-auto">
           <div className=" w-full xl:flex xl:items-center xl:justify-center  h-[50rem] pt-32 xl:pt-0 px-5">
             <div className="bg-custom3 flex flex-col xl:h-[20rem] h-full rounded-xl w-full xl:flex xl:flex-row xl:items-center  xl:justify-center ">

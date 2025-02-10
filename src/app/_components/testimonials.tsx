@@ -1,6 +1,5 @@
 "use client";
 
-import { useSwiper } from "swiper/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 register();
@@ -15,7 +14,6 @@ SwiperCore.use([Navigation, EffectCoverflow]);
 import { register } from "swiper/element";
 
 export function Testimonials() {
-  const swiper = useSwiper();
   const members = [
     {
       id: "1",
@@ -63,6 +61,37 @@ export function Testimonials() {
       github: "https://github.com/salomaosilval",
     },
   ];
+  const requirements = [
+    {
+      icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
+      text: "Ter mais que 18 anos",
+    },
+    {
+      icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
+      text: "Ter 1 ano ou mais de estudo em programação",
+    },
+    {
+      icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
+      text: "Ainda não trabalhar na área",
+    },
+    {
+      icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
+      text: "Já ter criado projetos sozinho que não sejam de cursos ou eventos",
+    },
+    {
+      icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
+      text: "Não participar de bootcamps ou programas de capacitação",
+    },
+    {
+      icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
+      text: "Ter disponibilidade para trabalhar no mínimo 1 hora por dia no projeto",
+    },
+    {
+      icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
+      text: "Ter disponibilidade para participar das reuniões do time, durante a semana e finais de semana",
+    },
+  ];
+
   return (
     <div>
       <section className="mt-56 mx-auto flex w-full max-w-[90rem]  flex-col">
@@ -73,57 +102,10 @@ export function Testimonials() {
           </h2>
           <div className="bg-gradient-to-r from-custom2 to-custom1 w-full h-1 flex items-center justify-center mt-1 xl:mt-2  rounded-xl"></div>
         </div>
-        <p className="text-center text-3xl text-white/80 pt-16 mb-40">
+        <p className="text-center text-2xl xl:text-3xl text-white/80 pt-16 mb-14">
           Veja o que quem já passou por essa experiência fala
         </p>
 
-        {/* <div className="flex items-center justify-center w-full px-10 xl:px-0 gap-5 h-full ">
-          <div className="flex  w-max rounded-xl bg-gradient-to-r p-1 from-custom2 to-custom1 ">
-            <div className=" bg-custom3 py-10 xl:px-5 xl:w-[28rem]  rounded-xl flex flex-col gap-8 items-center text-center ">
-              <div className="bg-gradient-to-r rounded-full p-[0.10rem] w-max from-custom2 to-custom1">
-                <div className="bg-custom3 p-1 rounded-full">
-                  <img
-                    src="https://avatars.githubusercontent.com/u/78116908?v=4"
-                    alt=""
-                    className="w-24 rounded-full"
-                  />
-                </div>
-              </div>
-              <h3 className=" text-3xl text-white">Matheus Oliveira</h3>
-              <p className="text-2xl xl:text-3xl text-white/80">
-                Antes de participar do Union, eu não tinha a mínima ideia de
-                como era trabalhar em equipe e foi muito importante ter essa
-                experiência. Durante a participação, consegui desenvolver soft
-                skills importantes para o mercado de trabalho, como organização,
-                atenção e trabalho em equipe.
-              </p>
-              <div className="w-full flex gap-5 justify-center items-center">
-                <a
-                  href="https://www.linkedin.com/in/matheushenrioliveira/"
-                  className="flex flex-col items-center justify-center text-lg text-white"
-                >
-                  <img
-                    src="https://media.graphassets.com/y4KMQdygSH6uZx46pxjU"
-                    alt=""
-                    className="w-6"
-                  />
-                  Linkedin
-                </a>
-                <a
-                  href="https://github.com/matheusOliv23"
-                  className="flex flex-col items-center justify-center text-lg text-white"
-                >
-                  <img
-                    src="https://media.graphassets.com/4lDgbi8FQpq8QYSiranx"
-                    alt=""
-                    className="w-6"
-                  />
-                  Github
-                </a>
-              </div>
-            </div>
-          </div>
-        </div> */}
         <div>
           <Swiper
             spaceBetween={190}
@@ -135,19 +117,15 @@ export function Testimonials() {
             breakpoints={{
               370: {
                 slidesPerView: 1,
-                
               },
               640: {
                 slidesPerView: 1,
-                
               },
               768: {
                 slidesPerView: 1,
-                
               },
               1024: {
                 slidesPerView: 2,
-                
               },
             }}
             coverflowEffect={{
@@ -179,7 +157,9 @@ export function Testimonials() {
                           />
                         </div>
                       </div>
-                      <h3 className=" xl:text-3xl text-3xl text-white">{info.name}</h3>
+                      <h3 className=" xl:text-3xl text-3xl text-white">
+                        {info.name}
+                      </h3>
                       <p className="text-2xl text-white/80">
                         {info.testimonial}
                       </p>
@@ -228,6 +208,28 @@ export function Testimonials() {
               </div>
             </div>
           </Swiper>
+        </div>
+      </section>
+
+      <section className="mt-56 mx-auto items-center p-20 h-full px-20 flex w-full max-w-[80rem] mb-10 rounded-xl text-center  gap-5 flex-col bg-test3  text-white">
+        <h2 className="text-6xl font-extrabold">Junte-se ao time!</h2>
+        <p className="text-3xl max-w-[40rem] mb-5 ">
+          Tem interesse em participar do Union? Confira abaixo os requisitos
+          para participar
+        </p>
+        {requirements.map((req) => (
+          <ul className="self-start px-5 text-start ">
+            <div className="flex gap-5 ">
+              <img src={req.icon} alt="" />
+              <li className="text-2xl">{req.text}</li>
+            </div>
+          </ul>
+        ))}
+
+        <div className="shadow-xl xl:flex justify-center rounded-md bg-test w-full xl:p-[0.20rem] xl:transition-all xl:ease-in xl:duration-200 z-10 space-x-6 mt-20 ">
+          <button className=" flex relative bg-transparent text-white h-20 text-3xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 w-full items-center justify-center before:h-full before:w-full before:origin-top-left before:rounded-md before:scale-x-0 before:bg-custom6 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100">
+            Inscrever-se
+          </button>
         </div>
       </section>
     </div>
