@@ -1,16 +1,12 @@
 "use client";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
 register();
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 import { Navigation, EffectCoverflow } from "swiper/modules";
 import SwiperCore from "swiper";
 SwiperCore.use([Navigation, EffectCoverflow]);
-
 import { register } from "swiper/element";
 
 export function Testimonials() {
@@ -59,36 +55,6 @@ export function Testimonials() {
         "Eu estava preso em cursos e não sabia como que era o fluxo de trabalho de uma empresa, com o Union eu consegui aprender isso e hoje me sinto muito mais preparado para o mercado. Durante a experiência no Union, eu aprendi a como pesquisar e se virar para resolver minhas task.",
       linkedin: "https://www.linkedin.com/in/salomaosilval/",
       github: "https://github.com/salomaosilval",
-    },
-  ];
-  const requirements = [
-    {
-      icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
-      text: "Ter mais que 18 anos",
-    },
-    {
-      icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
-      text: "Ter 1 ano ou mais de estudo em programação",
-    },
-    {
-      icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
-      text: "Ainda não trabalhar na área",
-    },
-    {
-      icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
-      text: "Já ter criado projetos sozinho que não sejam de cursos ou eventos",
-    },
-    {
-      icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
-      text: "Não participar de bootcamps ou programas de capacitação",
-    },
-    {
-      icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
-      text: "Ter disponibilidade para trabalhar no mínimo 1 hora por dia no projeto",
-    },
-    {
-      icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
-      text: "Ter disponibilidade para participar das reuniões do time, durante a semana e finais de semana",
     },
   ];
 
@@ -208,28 +174,6 @@ export function Testimonials() {
               </div>
             </div>
           </Swiper>
-        </div>
-      </section>
-
-      <section className="mt-56 mx-auto items-center p-20 h-full px-20 flex w-full max-w-[80rem] mb-10 rounded-xl text-center  gap-5 flex-col bg-test3  text-white">
-        <h2 className="text-6xl font-extrabold">Junte-se ao time!</h2>
-        <p className="text-3xl max-w-[40rem] mb-5 ">
-          Tem interesse em participar do Union? Confira abaixo os requisitos
-          para participar
-        </p>
-        {requirements.map((req) => (
-          <ul className="self-start px-5 text-start ">
-            <div className="flex gap-5 ">
-              <img src={req.icon} alt="" />
-              <li className="text-2xl">{req.text}</li>
-            </div>
-          </ul>
-        ))}
-
-        <div className="shadow-xl xl:flex justify-center rounded-md bg-test w-full xl:p-[0.20rem] xl:transition-all xl:ease-in xl:duration-200 z-10 space-x-6 mt-20 ">
-          <button className=" flex relative bg-transparent text-white h-20 text-3xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 w-full items-center justify-center before:h-full before:w-full before:origin-top-left before:rounded-md before:scale-x-0 before:bg-custom6 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100">
-            Inscrever-se
-          </button>
         </div>
       </section>
     </div>
