@@ -57,7 +57,7 @@ export function Faq() {
   };
 
   return (
-    <section className="mt-56 mx-auto flex w-full max-w-[90rem] h-screen gap-5 flex-col">
+    <section className="mt-56 mx-auto flex w-full max-w-[90rem] h-full gap-5 flex-col">
       <div className="flex items-center justify-center max-w-7xl mx-auto w-full gap-5 xl:gap-10 mb-10">
         <div className="bg-gradient-to-r from-custom2 to-custom1 w-full h-1 mt-1 xl:mt-2 flex items-center justify-center rounded-xl"></div>
         <h2 className="text-3xl xl:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-800 text-transparent bg-clip-text">

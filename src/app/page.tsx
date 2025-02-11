@@ -3,7 +3,7 @@ import { About } from "./_components/about";
 import { Testimonials } from "./_components/testimonials";
 import { Subscribe } from "./_components/subscribe";
 import { Faq } from "./_components/faq";
-
+import { Footer } from "./_components/footer";
 export default function Home() {
   return (
     <div>
@@ -12,6 +12,7 @@ export default function Home() {
       <Testimonials />
       <Subscribe/>
       <Faq/>
+      <Footer/>
     </div>
   );
 }
