@@ -1,44 +1,52 @@
-"use client"
+"use client";
 import { SetStateAction, useState } from "react";
 import { motion } from "framer-motion";
-import { z } from "zod";
+import { isValid, z } from "zod";
 import { FormDataSchema } from "../lib/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, SubmitHandler } from "react-hook-form";
-
+import { output } from "motion/react-client";
 
 type Inputs = z.infer<typeof FormDataSchema>;
 
-
 export function Subscribe() {
-    const steps = [
-        {
-          id: "1",
-          name: "Dados pessoais",
-          fields: ["firstName", "age", "github", "linkedin", "email", "frontend"],
-        },
-        {
-          id: "2",
-          name: "Informações técnicas ",
-          fields: ["timeLearning", "bestProject", "about"],
-        },
-        {
-          id: "3",
-          name: "Sobre você",
-          fields: [
-            "motivation",
-            "responsabilities",
-            "feedbacks",
-            "aboutUs",
-            "whyUs",
-            "group",
-          ],
-        },
-        {
-          id: "4",
-          name: "Enviar ",
-        },
-      ];
+  const steps = [
+    // "frontend"
+    {
+      id: "1",
+      name: "Dados pessoais",
+      fields: [
+        "firstName",
+        "age",
+        "github",
+        "linkedin",
+        "email",
+        "workPreference",
+      ],
+    },
+    // "timeLearning"
+    {
+      id: "2",
+      name: "Informações técnicas ",
+      fields: ["timeLearning", "bestProject", "about"],
+    },
+    {
+      id: "3",
+      name: "Sobre você",
+      fields: [
+        "motivation",
+        "responsabilities",
+        "feedbacks",
+        "aboutUs",
+        "whyUs",
+        "group",
+      ],
+    },
+    {
+      id: "4",
+      name: "Enviar ",
+    },
+  ];
   const requirements = [
     {
       icon: "https://media.graphassets.com/9YpETKdFREqKQa2wztob",
@@ -103,6 +111,9 @@ export function Subscribe() {
 
   type FieldName = keyof Inputs;
 
+  function teste() {
+    setShowForm(false);
+  }
   const next = async () => {
     const fields = steps[currentStep].fields;
     const output = await trigger(fields as FieldName[], { shouldFocus: true });
@@ -133,7 +144,7 @@ export function Subscribe() {
         {!showForm ? (
           <>
             <h2 className="text-6xl font-extrabold">Junte-se ao time!</h2>
-            <p className="text-3xl max-w-[40rem] mb-5">
+            <p className="text-3xl max-w-[40rem] text-center mb-5">
               Tem interesse em participar do Union? Confira abaixo os requisitos
               para participar
             </p>
@@ -230,7 +241,7 @@ export function Subscribe() {
                           className="bg-transparent border-2 w-full   border-white rounded-xl py-2 pl-3"
                         />
                         {errors.firstName?.message && (
-                          <p className="text-2xl text-red-500">
+                          <p className="text-xl mt-2 text-red-400">
                             {errors.firstName.message}
                           </p>
                         )}
@@ -245,9 +256,9 @@ export function Subscribe() {
                       <div>
                         <input
                           className="bg-transparent border-2 w-full   border-white rounded-xl py-2 pl-3"
-                          id="age"
                           type="number"
-                          {...register("age")}
+                          id="age"
+                          {...register("age", { valueAsNumber: true })}
                           placeholder="Qual sua idade?"
                         />
                         {errors.age?.message && (
@@ -293,7 +304,7 @@ export function Subscribe() {
                           placeholder="Qual seu Github?"
                         />
                         {errors.github?.message && (
-                          <p className="text-red-500 text-2xl">
+                          <p className="text-xl mt-2 text-red-400">
                             {errors.github?.message}
                           </p>
                         )}
@@ -313,7 +324,7 @@ export function Subscribe() {
                           placeholder="Qual seu Linkedin?"
                         />
                         {errors.linkedin?.message && (
-                          <p className="text-red-500 text-2xl">
+                          <p className="text-xl mt-2 text-red-400">
                             {errors.linkedin?.message}
                           </p>
                         )}
@@ -333,10 +344,10 @@ export function Subscribe() {
                             ? "bg-test"
                             : "bg-transparent"
                         } appearance-none rounded-full border-2 outline-none cursor-pointer before:content-[''] before:absolute before:top-[2px] before:left-[2px] before:w-6 before:h-6 before:rounded-full before:opacity-100 focus:before:bg-test`}
-                        type="radio"
+                        type="checkbox"
                         id="frontend"
                         value="frontend"
-                        {...register("work")}
+                        {...register("workPreference")}
                         checked={selectedOption === "frontend"}
                         onChange={handleRadioChange}
                       />
@@ -349,10 +360,10 @@ export function Subscribe() {
                             ? "bg-test"
                             : "bg-transparent"
                         } appearance-none rounded-full border-2 outline-none cursor-pointer before:content-[''] before:absolute before:top-[2px] before:left-[2px] before:w-6 before:h-6 before:rounded-full before:opacity-100 focus:before:bg-test`}
-                        type="radio"
+                        type="checkbox"
                         id="backend"
                         value="backend"
-                        {...register("work")}
+                        {...register("workPreference")}
                         checked={selectedOption === "backend"}
                         onChange={handleRadioChange}
                       />
@@ -385,8 +396,8 @@ export function Subscribe() {
                               ? "bg-test"
                               : "bg-transparent"
                           } appearance-none rounded-full border-2 outline-none cursor-pointer before:content-[''] before:absolute before:top-[2px] before:left-[2px] before:w-6 before:h-6 before:rounded-full before:opacity-100 focus:before:bg-test`}
-                          type="radio"
-                          id="option-one"
+                          type="checkbox"
+                          id="1 ano"
                           value="1 ano"
                           {...register("timeLearning")}
                           checked={selectedOption === "1 ano"}
@@ -402,8 +413,8 @@ export function Subscribe() {
                               ? "bg-test"
                               : "bg-transparent"
                           } appearance-none rounded-full border-2 outline-none cursor-pointer before:content-[''] before:absolute before:top-[2px] before:left-[2px] before:w-6 before:h-6 before:rounded-full before:opacity-100 focus:before:bg-test`}
-                          type="radio"
-                          id="option-two"
+                          type="checkbox"
+                          id="2 anos"
                           value="2 anos"
                           {...register("timeLearning")}
                           checked={selectedOption === "2 anos"}
@@ -418,8 +429,8 @@ export function Subscribe() {
                               ? "bg-test"
                               : "bg-transparent"
                           } appearance-none rounded-full border-2 outline-none cursor-pointer before:content-[''] before:absolute before:top-[2px] before:left-[2px] before:w-6 before:h-6 before:rounded-full before:opacity-100 focus:before:bg-test`}
-                          type="radio"
-                          id="option-three"
+                          type="checkbox"
+                          id="3 anos"
                           value="3 anos"
                           {...register("timeLearning")}
                           checked={selectedOption === "3 anos"}
@@ -430,15 +441,15 @@ export function Subscribe() {
                       <div className="flex items-center gap-2">
                         <input
                           className={`w-[2rem] h-[2rem] relative  ${
-                            selectedOption === "maisDe3"
+                            selectedOption === "mais de 3"
                               ? "bg-test"
                               : "bg-transparent"
                           } appearance-none rounded-full border-2 outline-none cursor-pointer before:content-[''] before:absolute before:top-[2px] before:left-[2px] before:w-6 before:h-6 before:rounded-full before:opacity-100 focus:before:bg-test`}
-                          type="radio"
-                          id="option-four"
-                          value="maisDe3"
+                          type="checkbox"
+                          id="mais3"
+                          value="mais3"
                           {...register("timeLearning")}
-                          checked={selectedOption === "maisDe3"}
+                          checked={selectedOption === "mais3"}
                           onChange={handleRadioChange}
                         />
                         <label htmlFor="maisDe3">Mais de 3 anos</label>
@@ -651,7 +662,7 @@ export function Subscribe() {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="w-full  pr-20 h-full mt-10"
               >
-                <div className="flex flex-col ">
+                <div className="flex flex-col mt-20 ">
                   <div className=" w-full h-[40rem] flex items-center flex-col justify-center">
                     <img
                       src="https://media.graphassets.com/05PPTFLdTGWFD091Jes1"
@@ -661,12 +672,19 @@ export function Subscribe() {
                     <h3 className="text-3xl font-bold">
                       Inscrição realizada com sucesso!
                     </h3>
-                    <div className="w-full h-full bg-red-50">
+                    <div className="w-full h-full ">
                       <p className="text-center  ">
                         {formData && (
-                          <div>
-                            <p className="text-black text-2xl">{JSON.stringify(formData, null, 2)}</p>
-                            <p>{formData.firstName}</p>
+                          <div className="flex items-center flex-col justify-center mt-10 text-3xl">
+                            <p>
+                              Obrigado <strong>{formData.firstName}</strong> por
+                              querer fazer parte do Union
+                            </p>
+                            <h3>
+                              em breve nossa equipe vai entrar em contato pelo
+                              seu email
+                              <strong> {formData.email}</strong>, fique atento.
+                            </h3>
                           </div>
                         )}
                       </p>
@@ -675,53 +693,41 @@ export function Subscribe() {
                 </div>
               </motion.div>
             )}
+            {currentStep < 3 && (
+              <div className="mt-8 pt-5 w-full">
+                <div className="flex justify-between gap-5">
+                  <div className="shadow-xl xl:flex justify-center p-1 rounded-md bg-test w-full xl:transition-all xl:ease-in xl:duration-200 z-10 space-x-6 mt-20">
+                    {currentStep === 0 ? (
+                      <button
+                        className="flex relative disabled:cursor-not-allowed text-white h-20 text-3xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 w-full items-center justify-center before:h-full before:w-full before:origin-top-left before:rounded-md before:scale-x-0 before:bg-gradient-to-r from-testeblend to-testeblend2 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
+                        onClick={teste}
+                      >
+                        Voltar
+                      </button>
+                    ) : (
+                      <button
+                        className="flex relative disabled:cursor-not-allowed text-white h-20 text-3xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 w-full items-center justify-center before:h-full before:w-full before:origin-top-left before:rounded-md before:scale-x-0 before:bg-gradient-to-r from-testeblend to-testeblend2 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
+                        onClick={prev}
+                        disabled={currentStep === 0}
+                      >
+                        Voltar
+                      </button>
+                    )}
+                  </div>
 
-            <div className="mt-8 pt-5">
-              <div className="flex justify-between">
-                <button
-                  type="button"
-                  onClick={prev}
-                  disabled={currentStep === 0}
-                  className="rounded bg-white px-2 py-1 text-sm font-semibold text-sky-900 shadow-sm ring-1 ring-inset ring-sky-300 hover:bg-sky-50 disabled:cursor-not-allowed disabled:opacity-50"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="h-6 w-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15.75 19.5L8.25 12l7.5-7.5"
-                    />
-                  </svg>
-                </button>
-                <button
-                  type="button"
-                  onClick={next}
-                  disabled={currentStep === steps.length - 1}
-                  className="rounded bg-white px-2 py-1 text-sm font-semibold text-sky-900 shadow-sm ring-1 ring-inset ring-sky-300 hover:bg-sky-50 disabled:cursor-not-allowed disabled:opacity-50"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="h-6 w-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                    />
-                  </svg>
-                </button>
+                  <div className="shadow-xl xl:flex justify-center p-1 rounded-md bg-test w-full xl:transition-all xl:ease-in xl:duration-200 z-10 space-x-6 mt-20">
+                    <button
+                      className="flex relative disabled:cursor-not-allowed text-white h-20 text-3xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 w-full items-center justify-center before:h-full before:w-full before:origin-top-left before:rounded-md before:scale-x-0 before:bg-gradient-to-r from-testeblend to-testeblend2 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
+                      type="button"
+                      onClick={next}
+                      disabled={currentStep === steps.length - 1}
+                    >
+                      Próximo
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
+            )}
           </>
         )}
       </section>
