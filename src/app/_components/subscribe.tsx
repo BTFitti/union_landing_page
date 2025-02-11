@@ -167,6 +167,10 @@ export function Subscribe() {
           </>
         ) : (
           <>
+          <h2 className="text-6xl font-extrabold">Junte-se ao time!</h2>
+            <p className="text-3xl max-w-[40rem] text-center mb-10">
+              Ficamos felizes em saber que você tem interesse em fazer parte do Unio! Agora é só responder esse formulário.
+            </p>
             <nav className="flex items-center justify-between">
               <ul className="w-full flex gap-[13rem]">
                 {/**form steps */}
@@ -220,12 +224,14 @@ export function Subscribe() {
             </nav>
             <form className="w-full" onSubmit={handleSubmit(processForm)}>
               {currentStep === 0 && (
+                
                 <motion.div
                   initial={{ x: delta >= 0 ? "50%" : "-50%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="w-full  pr-20 h-full mt-10"
                 >
+                    
                   <div className="flex flex-col gap-10">
                     <div className="flex flex-col gap-2">
                       <div className="flex gap-2">

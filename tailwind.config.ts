@@ -28,7 +28,8 @@ export default {
         test: "linear-gradient(75deg, rgb(0, 72, 254) 0%, rgb(133, 29, 134) 100%);",
         test2: "linear-gradient(75deg, rgb(0, 72, 254) -55%, rgb(133, 29, 134) 100%);",
         test3: "linear-gradient(225deg, rgba(0, 72, 254, 0.2) 0%, rgba(133, 29, 134, 0.2) 100%);",
-        teste4: "linear-gradient(225deg, rgba(0, 72, 254, 0.2) 10%, rgba(133, 29, 134, 0.2) 50%)"
+        teste4: "linear-gradient(225deg, rgba(0, 72, 254, 0.2) 10%, rgba(133, 29, 134, 0.2) 50%)",
+        teste5: "linear-gradient(225deg, rgb(0, 72, 254) 0%, rgb(133, 29, 134) 100%);"
       },
       boxShadow: {
         "custom-shadow": "rgba(133, 29, 134, 0.4) 0px 0px 30px 0px",
