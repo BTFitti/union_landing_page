@@ -358,7 +358,7 @@ export function About() {
               </li>
             </ol>
           </div>
-          <div className="w-[0.32rem] h-[160%] xl:h-[calc(100%_-_8.2rem)] absolute bg-test top-0  z-[-9999]  left-1/2 right-1/2"></div>
+          <div className="w-[0.32rem] h-[160%] xl:h-[calc(100%_-_5.7rem)]absolute bg-test top-0  z-[-9999]  left-1/2 right-1/2"></div>
         </div>
       </section>
       </div>

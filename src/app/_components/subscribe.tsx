@@ -78,10 +78,10 @@ export function Subscribe() {
       text: "Ter disponibilidade para participar das reuniões do time, durante a semana e finais de semana",
     },
   ];
-  const [isChecked, setIsChecked] = useState(false); // Estado para controlar o checkbox
+  const [isChecked, setIsChecked] = useState(false); 
 
   const handleCheckboxChange = () => {
-    setIsChecked((prev) => !prev); // Alterna o estado do checkbox
+    setIsChecked((prev) => !prev);
   };
 
   const [previousStep, setPreviousStep] = useState(0);
