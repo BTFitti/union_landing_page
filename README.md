@@ -10,3 +10,9 @@ Infelizmente não consegui realizar o deploy do projeto devido a falta de tempo 
 
 https://github.com/user-attachments/assets/f49740ec-93e7-4045-a35b-27a93377304d
 # Formulário 
+# Instruções para rodar localmente
+- Baixe o projeto ou faça um clone
+- Navegue para a pasta `\union_landin_page_main\union_landin_page_main`
+- Instale as dependencias com o comando `npm i`
+- Rode o projeto com o comando `npm run dev`
+- No terminal ele vai te dar uma rota local `https://localhost:3000` segure CTRL e clique no link para abrir no seu navegador.
