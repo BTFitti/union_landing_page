@@ -254,8 +254,8 @@ export function About() {
       </div>
 
       {/*seção das etapas*/}
-      <div id="etapas" className="w-full max-w-[80rem]  flex flex-col mt-[5rem] px-10 ">
-      <section>
+     
+      <section id="etapas" className="w-full max-w-[80rem]  flex flex-col mt-[5rem] px-10 ">
         <div className="flex items-center  justify-center w-full gap-5 xl:gap-10">
           <div className="bg-gradient-to-r from-custom2 to-custom1 w-full h-1 mt-1 xl:mt-2 flex items-center justify-center  rounded-xl"></div>
           <h2 className="  text-3xl xl:text-5xl font-bold bg-gradient-to-r from-purple-600  to-blue-800 text-transparent bg-clip-text ">
@@ -358,10 +358,10 @@ export function About() {
               </li>
             </ol>
           </div>
-          <div className="w-[0.32rem] h-[160%] xl:h-[calc(100%_-_5.7rem)]absolute bg-test top-0  z-[-9999]  left-1/2 right-1/2"></div>
+          <div className="w-[0.32rem] h-[160%] xl:h-[calc(100%_-_5.7rem)] absolute bg-test top-0  z-[-9999]  left-1/2 right-1/2"></div>
         </div>
       </section>
-      </div>
+    
      
 
       <section className="w-full mx-auto bg-[url(https://media.graphassets.com/zqzyqOSd6RG6uFM2Rdgx)] bg-cover ">
