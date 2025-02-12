@@ -4,7 +4,7 @@ import Image from "next/image";
 import logoUnion from "../../../../public/logo-union-developers.svg";
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar a visibilidade do menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
   const textHeader = [
     { name: "Sobre", id: "#sobre" },

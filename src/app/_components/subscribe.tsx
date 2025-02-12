@@ -1,17 +1,17 @@
 "use client";
 import { SetStateAction, useState } from "react";
 import { motion } from "framer-motion";
-import { isValid, z } from "zod";
+import { z } from "zod";
 import { FormDataSchema } from "../lib/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { output } from "motion/react-client";
+
 
 type Inputs = z.infer<typeof FormDataSchema>;
 
 export function Subscribe() {
   const steps = [
-    // "frontend"
+    
     {
       id: "1",
       name: "Dados pessoais",
@@ -24,7 +24,7 @@ export function Subscribe() {
         "workPreference",
       ],
     },
-    // "timeLearning"
+    
     {
       id: "2",
       name: "Informações técnicas ",

@@ -8,7 +8,7 @@ import Like from "../../../public/like.svg";
 import Lamp from "../../../public/bulb_on.svg";
 import Profile from "../../../public/profile-2.svg";
 import Logo from "../../../public/WayysMB8RQyrgcahBMQs.svg";
-import "../globals.css"
+
 
 export function About() {
   const pilars = [

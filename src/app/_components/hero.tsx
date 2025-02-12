@@ -4,14 +4,14 @@ import uiImage from "../../../public/Curved UI Render.svg";
 
 export function Hero() {
   return (
-    <div className="flex w-full h-screen bg-heroImg bg-cover pt-24 pb-10 px-7"> {/* Ajuste o padding-top aqui */}
+    <div className="flex w-full h-screen bg-heroImg bg-cover pt-24 pb-10 px-7"> 
       <div className="flex xl:grid xl:grid-cols-2 xl:mx-36">
         <div className="flex flex-col xl:py-32 space-y-6">
           <h1 className="text-2xl xl:text-5xl text-white font-bold">
-            Ganhe{" "}
+            Ganhe
             <strong className="bg-gradient-to-tr from-purple-600 to-blue-800 text-transparent bg-clip-text">
               experiência
-            </strong>{" "}
+            </strong>
             como desenvolvedor júnior
           </h1>
           <p className="text-white/90 text-xl xl:text-4xl xl:leading-10 break-keep max-w-sm xl:max-w-2xl pb-5">
