@@ -57,7 +57,7 @@ export function Faq() {
   };
 
   return (
-    <section className="mt-56 mx-auto flex w-full max-w-[90rem] h-full gap-5 flex-col">
+    <section  id="duvidas" className="mt-56 mx-auto flex w-full max-w-[90rem] h-full gap-5 flex-col px-5">
       <div className="flex items-center justify-center max-w-7xl mx-auto w-full gap-5 xl:gap-10 mb-10">
         <div className="bg-gradient-to-r from-custom2 to-custom1 w-full h-1 mt-1 xl:mt-2 flex items-center justify-center rounded-xl"></div>
         <h2 className="text-3xl xl:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-800 text-transparent bg-clip-text">
@@ -66,18 +66,17 @@ export function Faq() {
         <div className="bg-gradient-to-r from-custom2 to-custom1 w-full h-1 flex items-center justify-center mt-1 xl:mt-2 rounded-xl"></div>
       </div>
       {faq.map((info, index) => (
-        <dl className="flex items-center justify-center mb-7" key={info.id}>
+        <dl className="flex items-center justify-center mb-3" key={info.id}>
           <div className="flex flex-col w-full">
             <dt
-              className={`bg-teste5 flex font-bold  w-full h-[8rem] items-center rounded-xl p-5 ${
-                openIndex === index ? "rounded-b-none" : "rounded-xl"
-              }`}
+            
+              className={`bg-teste5 flex font-bold  w-full h-[6rem] xl:h-[8rem] items-center rounded-xl px-2 xl:p-5 ${openIndex === index ? "rounded-b-none" : "rounded-xl" }`}
             >
               <button
-                className={`flex  justify-between w-full `}
+                className={`flex  justify-between w-full items-center ${openIndex === index ? "border-4 border-yellow-500" : ""}  `}
                 onClick={() => toggleContent(index)}
               >
-                <h3 className="text-4xl  text-white/80">{info.h3}</h3>
+                <h3 className="text-xl xl:text-4xl text-start p-3   text-white/80">{info.h3}</h3>
                 <img
                   src={
                     openIndex === index
@@ -89,7 +88,7 @@ export function Faq() {
               </button>
             </dt>
             {openIndex === index && (
-              <dd className="bg-red-50 w-full h-full text-3xl gap-5 flex flex-col p-5 rounded-b-xl">
+              <dd className="bg-red-50 w-full h-full xl:text-3xl gap-5 flex flex-col p-5 rounded-b-xl">
                 {info.text.split("\n\n").map((paragraph, idx) => (
                   <p key={idx}>{paragraph}</p>
                 ))}

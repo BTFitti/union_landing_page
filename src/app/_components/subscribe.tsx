@@ -40,6 +40,7 @@ export function Subscribe() {
         "aboutUs",
         "whyUs",
         "group",
+        "termsAccepted",
       ],
     },
     {
@@ -77,6 +78,11 @@ export function Subscribe() {
       text: "Ter disponibilidade para participar das reuniões do time, durante a semana e finais de semana",
     },
   ];
+  const [isChecked, setIsChecked] = useState(false); // Estado para controlar o checkbox
+
+  const handleCheckboxChange = () => {
+    setIsChecked((prev) => !prev); // Alterna o estado do checkbox
+  };
 
   const [previousStep, setPreviousStep] = useState(0);
   const [currentStep, setCurrentStep] = useState(0);
@@ -139,26 +145,28 @@ export function Subscribe() {
   }
 
   return (
-    <div>
-      <section className="mt-56 mx-auto h-full justify-between items-center p-20  flex w-full max-w-[80rem] mb-10 rounded-xl gap-5 flex-col bg-test3  text-white">
+    <div className="px-5">
+      <section className="mt-56 mx-auto h-full pt-10 justify-between items-center xl:p-20 px-2 flex w-full max-w-[80rem] mb-10 rounded-xl gap-5 flex-col bg-test3  text-white">
         {!showForm ? (
           <>
-            <h2 className="text-6xl font-extrabold">Junte-se ao time!</h2>
-            <p className="text-3xl max-w-[40rem] text-center mb-5">
+            <h2 className="text-3xl xl:text-6xl font-extrabold">
+              Junte-se ao time!
+            </h2>
+            <p className="text-lg xl:text-3xl max-w-[40rem] text-center mb-5">
               Tem interesse em participar do Union? Confira abaixo os requisitos
               para participar
             </p>
             {requirements.map((req) => (
-              <ul className="self-start pr-5 text-start" key={req.text}>
+              <ul className="self-start pr-5 text-start " key={req.text}>
                 <div className="flex gap-5">
                   <img src={req.icon} alt="" />
-                  <li className="text-2xl">{req.text}</li>
+                  <li className="  xl:text-2xl">{req.text}</li>
                 </div>
               </ul>
             ))}
-            <div className="shadow-xl xl:flex justify-center p-1 rounded-md bg-test w-full xl:transition-all xl:ease-in xl:duration-200 z-10 space-x-6 mt-20">
+            <div className="shadow-xl xl:flex justify-center mb-10 p-1 rounded-md bg-test w-full xl:transition-all xl:ease-in xl:duration-200 z-10 space-x-6 xl:mt-20">
               <button
-                className="flex relative text-white h-20 text-3xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 w-full items-center justify-center before:h-full before:w-full before:origin-top-left before:rounded-md before:scale-x-0 before:bg-gradient-to-r from-testeblend to-testeblend2 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
+                className="flex relative text-white h-14  xl:h-20 text-2xl xl:text-3xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 w-full items-center justify-center before:h-full before:w-full before:origin-top-left before:rounded-md before:scale-x-0 before:bg-gradient-to-r from-testeblend to-testeblend2 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
                 onClick={testee}
               >
                 Inscrever-se
@@ -167,25 +175,31 @@ export function Subscribe() {
           </>
         ) : (
           <>
-          <h2 className="text-6xl font-extrabold">Junte-se ao time!</h2>
-            <p className="text-3xl max-w-[40rem] text-center mb-10">
-              Ficamos felizes em saber que você tem interesse em fazer parte do Unio! Agora é só responder esse formulário.
+            <h2 className=" text-2xl xl:text-6xl font-extrabold">
+              Junte-se ao time!
+            </h2>
+            <p className="xl:text-3xl max-w-[40rem] text-center mb-10">
+              Ficamos felizes em saber que você tem interesse em fazer parte do
+              Unio! Agora é só responder esse formulário.
             </p>
             <nav className="flex items-center justify-between">
-              <ul className="w-full flex gap-[13rem]">
+              <ul className="w-full flex xl:gap-[13rem]">
                 {/**form steps */}
                 {steps.map((info, index) => (
                   <div className="w-full gap-5 text-white text-center flex flex-col items-center justify-between min-h-[150px]">
                     {currentStep > index ? (
                       <>
-                        <li key={info.id} className="text-3xl flex-grow">
+                        <li
+                          key={info.id}
+                          className="xl:text-3xl text-md   flex items-end flex-grow "
+                        >
                           {info.name}
                         </li>
                         <span
-                          className={`bg-test text-3xl relative w-20 h-20 flex items-center justify-center rounded-full ${
+                          className={`bg-test text-3xl relative w-10 h-10 xl:w-20  xl:h-20 flex items-center justify-center rounded-full ${
                             index === steps.length - 1
                               ? ""
-                              : "after:w-[8rem] after:rounded-xl after:h-1 after:left-[145px] after:bg-test after:absolute"
+                              : "after:w-[2rem] xl:after:w-[8rem] after:rounded-xl after:h-1 after:left-[44px] xl:after:left-[145px] after:bg-test after:absolute"
                           }`}
                         >
                           {info.id}
@@ -193,12 +207,14 @@ export function Subscribe() {
                       </>
                     ) : currentStep === index ? (
                       <>
-                        <li className="text-3xl flex-grow">{info.name}</li>
+                        <li className="text-md xl:text-3xl  flex items-end flex-grow">
+                          {info.name}
+                        </li>
                         <span
-                          className={`bg-test text-3xl relative w-20 h-20 flex items-center justify-center rounded-full ${
+                          className={`bg-test text-3xl relative w-10 h-10 xl:w-20  xl:h-20 flex items-center justify-center rounded-full ${
                             index === steps.length - 1
                               ? ""
-                              : "after:w-[8rem] after:rounded-xl after:h-1 after:left-[145px] after:bg-test after:absolute"
+                              : "after:w-[2rem] xl:after:w-[8rem] after:rounded-xl after:h-1 after:left-[44px] xl:after:left-[145px] after:bg-test after:absolute"
                           }`}
                         >
                           {info.id}
@@ -206,12 +222,14 @@ export function Subscribe() {
                       </>
                     ) : (
                       <>
-                        <li className="text-3xl flex-grow">{info.name}</li>
+                        <li className="text-md xl:text-3xl  flex items-end flex-grow">
+                          {info.name}
+                        </li>
                         <span
-                          className={`bg-gray-500 text-3xl relative w-20 h-20  flex items-center justify-center rounded-full ${
+                          className={`bg-gray-500 xl:text-3xl relative w-10 h-10 xl:w-20  xl:h-20  flex items-center justify-center rounded-full ${
                             index === steps.length - 1
                               ? ""
-                              : "after:w-[8rem] after:rounded-xl after:h-1 after:left-[145px] after:bg-test after:absolute"
+                              : "after:w-[2rem] xl:after:w-[8rem]  after:rounded-xl after:h-1 after:left-[42px] xl:after:left-[145px] after:bg-test after:absolute"
                           }`}
                         >
                           {info.id}
@@ -224,14 +242,12 @@ export function Subscribe() {
             </nav>
             <form className="w-full" onSubmit={handleSubmit(processForm)}>
               {currentStep === 0 && (
-                
                 <motion.div
                   initial={{ x: delta >= 0 ? "50%" : "-50%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="w-full  pr-20 h-full mt-10"
                 >
-                    
                   <div className="flex flex-col gap-10">
                     <div className="flex flex-col gap-2">
                       <div className="flex gap-2">
@@ -384,13 +400,13 @@ export function Subscribe() {
                   initial={{ x: delta >= 0 ? "50%" : "-50%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="w-full  pr-20 h-full mt-10"
+                  className="w-full  xl:pr-20 h-full mt-10"
                 >
                   <div className="flex flex-col gap-3">
                     <div className="gap-5 flex flex-col">
                       <div className="flex gap-2">
                         <span className="text-red-500">*</span>
-                        <p className="text-2xl">
+                        <p className="xl:text-2xl">
                           Quanto tempo você estuda programação?
                         </p>
                       </div>
@@ -465,7 +481,7 @@ export function Subscribe() {
                     <div className="flex flex-col gap-2">
                       <div className="flex gap-2  ">
                         <span className="text-red-500">*</span>
-                        <label htmlFor="bestProject" className="text-3xl">
+                        <label htmlFor="bestProject" className="xl:text-3xl">
                           Link do repositório do seu melhor projeto{" "}
                         </label>
                       </div>
@@ -487,19 +503,19 @@ export function Subscribe() {
                     <div className="flex flex-col gap-2">
                       <div className="flex gap-2  ">
                         <span className="text-red-500">*</span>
-                        <label htmlFor="about" className="text-3xl">
+                        <label htmlFor="about" className=" xl:text-3xl">
                           Fale sobre como foi construir esse projeto? Quais
                           foram os aprendizados e dificuldades que teve durante
                           o desenvolvimento?
                         </label>
                       </div>
                       <div>
-                        <input
-                          type="text"
+                        <textarea
+                          cols={40}
                           id="about"
                           placeholder="Fale sobre o seu melhor projeto, nos conte como foi trabalhar nesse projeto?"
                           {...register("about")}
-                          className="bg-transparent border-2 w-full pb-32 py-2 px-5 border-white rounded-xl align-text-top"
+                          className="bg-transparent xl:text-2xl border-2 w-full pb-32 py-2 px-5 border-white rounded-xl align-text-top text-pretty"
                         />
                         {errors.about?.message && (
                           <p className="text-2xl text-red-500">
@@ -516,20 +532,19 @@ export function Subscribe() {
                   initial={{ x: delta >= 0 ? "50%" : "-50%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="w-full  pr-20 h-full mt-10"
+                  className="w-full pr-5 xl:pr-20 h-full mt-10"
                 >
                   <div className="flex flex-col gap-3">
                     <div className="flex flex-col gap-2">
                       <div className="flex gap-2  ">
                         <span className="text-red-500">*</span>
-                        <label htmlFor="motivation" className="text-xl">
+                        <label htmlFor="motivation" className="xl:text-xl">
                           Porque você gosta de programar? Qual sua maior
                           motivação?
                         </label>
                       </div>
                       <div>
-                        <input
-                          type="text"
+                        <textarea
                           id="motivation"
                           placeholder="Qual sua maior motivação para fazer oque faz?"
                           {...register("motivation")}
@@ -545,14 +560,16 @@ export function Subscribe() {
                     <div className="flex flex-col gap-2">
                       <div className="flex gap-2  ">
                         <span className="text-red-500">*</span>
-                        <label htmlFor="responsabilities" className="text-xl">
+                        <label
+                          htmlFor="responsabilities"
+                          className="xl:text-xl"
+                        >
                           Como você faz para conseguir cumprir todos as suas
                           responsabilidades do dia a dia?
                         </label>
                       </div>
                       <div>
-                        <input
-                          type="text"
+                        <textarea
                           id="responsabilities"
                           placeholder="Qual sua maior motivação para fazer oque faz?"
                           {...register("responsabilities")}
@@ -568,13 +585,12 @@ export function Subscribe() {
                     <div className="flex flex-col gap-2">
                       <div className="flex gap-2  ">
                         <span className="text-red-500">*</span>
-                        <label htmlFor="feedbacks" className="text-xl">
+                        <label htmlFor="feedbacks" className="xl:text-xl">
                           Quando você recebe um feedback, como é para você?
                         </label>
                       </div>
                       <div>
-                        <input
-                          type="text"
+                        <textarea
                           id="feedbacks"
                           placeholder="Nos conte como é para você receber feedback?"
                           {...register("feedbacks")}
@@ -591,13 +607,12 @@ export function Subscribe() {
                     <div className="flex flex-col gap-2">
                       <div className="flex gap-2  ">
                         <span className="text-red-500">*</span>
-                        <label htmlFor="feedbacks" className="text-xl">
+                        <label htmlFor="feedbacks" className="xl:text-xl">
                           Como você ficou sabendo sobre o Union?
                         </label>
                       </div>
                       <div>
-                        <input
-                          type="text"
+                        <textarea
                           id="aboutUs"
                           placeholder="Como você ficou sabendo sobre o Union?"
                           {...register("aboutUs")}
@@ -614,13 +629,12 @@ export function Subscribe() {
                     <div className="flex flex-col gap-2">
                       <div className="flex gap-2  ">
                         <span className="text-red-500">*</span>
-                        <label htmlFor="whyUs" className="text-xl">
+                        <label htmlFor="whyUs" className="xl:text-xl">
                           Por que você quer fazer parte do Union?
                         </label>
                       </div>
                       <div>
-                        <input
-                          type="text"
+                        <textarea
                           id="whyUs"
                           placeholder="Por que você quer fazer parte do Union?"
                           {...register("whyUs")}
@@ -637,14 +651,13 @@ export function Subscribe() {
                     <div className="flex flex-col gap-2">
                       <div className="flex gap-2  ">
                         <span className="text-red-500">*</span>
-                        <label htmlFor="group" className="text-xl w-[40rem]">
+                        <label htmlFor="group" className="xl:text-xl w-[40rem]">
                           Por que você deveria fazer parte do pequeno grupo que
                           vai ter a oportunidade de participar do Union?
                         </label>
                       </div>
                       <div>
-                        <input
-                          type="text"
+                        <textarea
                           id="group"
                           placeholder="Por que você deveria fazer parte do pequeno grupo que vai ter a oportunidade de participar do Union?"
                           {...register("group")}
@@ -657,6 +670,35 @@ export function Subscribe() {
                         )}
                       </div>
                     </div>
+                   
+                    <div className="flex items-center gap-2">
+                      <input
+                        className={`w-[2rem] h-[2rem] relative  appearance-none border-2 border-gray-300 rounded cursor-pointer ${
+                          isChecked ? "bg-test" : "bg-transparent"
+                        }`}
+                        type="checkbox"
+                        id="termsAccepted"
+                        value="true"
+                        {...register("termsAccepted")}
+                        checked={isChecked}
+                        onChange={handleCheckboxChange}
+                      />
+                      <label htmlFor="termsAccepted" className="relative xl:text-2xl">
+                        <span
+                          className={`cursor-pointer absolute -left-[8.5rem] xl:-left-[12rem] top-0 w-full h-full flex items-center justify-center text-3xl text-yellow-300 transition-opacity duration-200 ${
+                            isChecked ? "opacity-100" : "opacity-0"
+                          }`}
+                        >
+                          ✔
+                        </span>
+                        Li e concordo com os termos.
+                      </label>
+                    </div>
+                    {errors.termsAccepted && (
+                      <p className="text-red-500">
+                        {errors.termsAccepted.message}
+                      </p>
+                    )}
                   </div>
                 </motion.div>
               )}
@@ -666,22 +708,22 @@ export function Subscribe() {
                 initial={{ x: delta >= 0 ? "50%" : "-50%", opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="w-full  pr-20 h-full mt-10"
+                className="w-full   h-full mt-10"
               >
-                <div className="flex flex-col mt-20 ">
-                  <div className=" w-full h-[40rem] flex items-center flex-col justify-center">
+                <div className="flex flex-col xl:mt-20 ">
+                  <div className=" w-full h-[40rem] flex items-center  flex-col justify-center">
                     <img
                       src="https://media.graphassets.com/05PPTFLdTGWFD091Jes1"
                       className="w-[5rem]"
                       alt=""
                     />
-                    <h3 className="text-3xl font-bold">
+                    <h3 className="xl:text-3xl font-bold">
                       Inscrição realizada com sucesso!
                     </h3>
                     <div className="w-full h-full ">
                       <p className="text-center  ">
                         {formData && (
-                          <div className="flex items-center flex-col justify-center mt-10 text-3xl">
+                          <div className="flex items-center flex-col justify-center mt-10 xl:text-3xl">
                             <p>
                               Obrigado <strong>{formData.firstName}</strong> por
                               querer fazer parte do Union
@@ -702,17 +744,17 @@ export function Subscribe() {
             {currentStep < 3 && (
               <div className="mt-8 pt-5 w-full">
                 <div className="flex justify-between gap-5">
-                  <div className="shadow-xl xl:flex justify-center p-1 rounded-md bg-test w-full xl:transition-all xl:ease-in xl:duration-200 z-10 space-x-6 mt-20">
+                  <div className="shadow-xl xl:flex justify-center p-1 rounded-md h-full   bg-test w-full xl:transition-all xl:ease-in xl:duration-200 z-10 space-x-6 xl:mt-20 xl:mb-0 mb-14">
                     {currentStep === 0 ? (
                       <button
-                        className="flex relative disabled:cursor-not-allowed text-white h-20 text-3xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 w-full items-center justify-center before:h-full before:w-full before:origin-top-left before:rounded-md before:scale-x-0 before:bg-gradient-to-r from-testeblend to-testeblend2 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
+                        className="flex relative disabled:cursor-not-allowed text-white text-2xl h-10 xl:h-20 xl:text-3xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 w-full items-center justify-center before:h-full before:w-full before:origin-top-left before:rounded-md before:scale-x-0 before:bg-gradient-to-r from-testeblend to-testeblend2 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
                         onClick={teste}
                       >
                         Voltar
                       </button>
                     ) : (
                       <button
-                        className="flex relative disabled:cursor-not-allowed text-white h-20 text-3xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 w-full items-center justify-center before:h-full before:w-full before:origin-top-left before:rounded-md before:scale-x-0 before:bg-gradient-to-r from-testeblend to-testeblend2 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
+                        className="flex relative disabled:cursor-not-allowed text-white text-2xl h-10 xl:h-20 xl:text-3xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 w-full items-center justify-center before:h-full before:w-full before:origin-top-left before:rounded-md before:scale-x-0 before:bg-gradient-to-r from-testeblend to-testeblend2 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
                         onClick={prev}
                         disabled={currentStep === 0}
                       >
@@ -721,9 +763,9 @@ export function Subscribe() {
                     )}
                   </div>
 
-                  <div className="shadow-xl xl:flex justify-center p-1 rounded-md bg-test w-full xl:transition-all xl:ease-in xl:duration-200 z-10 space-x-6 mt-20">
+                  <div className="shadow-xl xl:flex justify-center p-1 rounded-md h-full   bg-test w-full xl:transition-all xl:ease-in xl:duration-200 z-10 space-x-6 xl:mt-20 xl:mb-0 mb-14">
                     <button
-                      className="flex relative disabled:cursor-not-allowed text-white h-20 text-3xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 w-full items-center justify-center before:h-full before:w-full before:origin-top-left before:rounded-md before:scale-x-0 before:bg-gradient-to-r from-testeblend to-testeblend2 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
+                      className="flex relative disabled:cursor-not-allowed text-white text-2xl h-10 xl:h-20 xl:text-3xl rounded-lg font-semibold transition-colors before:absolute before:left-0 before:top-0 before:-z-10 w-full items-center justify-center before:h-full before:w-full before:origin-top-left before:rounded-md before:scale-x-0 before:bg-gradient-to-r from-testeblend to-testeblend2 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
                       type="button"
                       onClick={next}
                       disabled={currentStep === steps.length - 1}

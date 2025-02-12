@@ -59,7 +59,7 @@ export function Testimonials() {
   ];
 
   return (
-    <div>
+    <div id="testimonials">
       <section className="mt-56 mx-auto flex w-full max-w-[90rem]  flex-col">
         <div className="flex items-center justify-center max-w-7xl mx-auto w-full gap-5 xl:gap-10">
           <div className="bg-gradient-to-r from-custom2 to-custom1 w-full h-1 mt-1 xl:mt-2 flex items-center justify-center  rounded-xl"></div>

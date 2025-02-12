@@ -15,6 +15,7 @@ export const FormDataSchema = z.object({
   bestProject: z.string().min(20, "Link inválido"),
   about: z.string().min(20, "Campo obrigatório!"),
 
+  termsAccepted: z.string().min(1, {message: "Você deve aceitar os termos"}),
   motivation: z.string().min(20, "Campo obrigatório"),
   responsabilities: z.string().min(20, "Campo obrigatório"),
   feedbacks: z.string().min(20, "Campo obrigatório"),

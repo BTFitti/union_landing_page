@@ -1,15 +1,15 @@
 export function Footer() {
   return (
     <section>
-      <div className="flex bg-custom5 h-full px-24 py-14 mt-20 justify-between">
-        <div className="flex flex-col justify-center items-center">
+      <div className="flex bg-custom5 h-full xl:px-24 xl:flex xl:flex-row flex-col xl:py-14 py-10 xl:mt-20 justify-between">
+        <div className="flex flex-col justify-center  items-center">
           <img
             src="	https://media.graphassets.com/2rObY82rREidExKivdTB"
             alt=""
             className="w-[20rem]"
           />
           <div>
-            <p className="text-xl text-white  max-w-[22rem] px-5">
+            <p className="xl:text-xl text-center text-white  max-w-[22rem] px-5">
               O Union proporciona experiência para desenvolvedores juniors,
               transformando-os em profissionais preparados para o mercado.
             </p>
@@ -17,7 +17,7 @@ export function Footer() {
         </div>
         <nav className="flex ">
           <div className="h-full  p-5 flex flex-col  text-white gap-5">
-            <h2 className="text-3xl">Saiba mais</h2>
+            <h2 className="text-xl  xl:text-3xl">Saiba mais</h2>
             <ul className="flex flex-col text-xl gap-2">
               <li>
                 <a href="#sobre">Sobre</a>
@@ -29,10 +29,10 @@ export function Footer() {
           </div>
 
           <div className="h-full  p-5 text-white flex flex-col gap-5">
-            <h2 className="text-3xl">Dúvidas</h2>
+            <h2 className="text-xl xl:text-3xl">Dúvidas</h2>
             <ul className="flex flex-col text-xl gap-2">
               <li>
-                <a href="#duvidas">FAQ</a>
+                <a href="#duvidas" className="text-lg">FAQ</a>
               </li>
               <li>
                 <a href="#etapas">Como funciona</a>
@@ -42,7 +42,7 @@ export function Footer() {
 
           <div></div>
         </nav>
-        <div className="flex flex-col items-center gap-5 text-white  ">
+        <div className="flex xl:flex-col items-center gap-5 justify-center text-white  ">
           <a href="">
             <div className="flex justify-center flex-col items-center ">
               <img
@@ -75,7 +75,7 @@ export function Footer() {
           </a>
         </div>
       </div>
-      <div className="flex items-center justify-center py-2"><p className="text-white/80 text-2xl">© Union Developers - 2025</p></div>
+      <div className="flex items-center justify-center py-2"><p className="text-white/80 xl:text-2xl">© Union Developers - 2025</p></div>
     </section>
   );
 }

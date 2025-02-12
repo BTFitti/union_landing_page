@@ -8,6 +8,7 @@ import Like from "../../../public/like.svg";
 import Lamp from "../../../public/bulb_on.svg";
 import Profile from "../../../public/profile-2.svg";
 import Logo from "../../../public/WayysMB8RQyrgcahBMQs.svg";
+import "../globals.css"
 
 export function About() {
   const pilars = [
@@ -57,199 +58,204 @@ export function About() {
       </section>
 
       {/* section pilares */}
-      <section className="mt-32 max-w-[80rem] mx-4 ">
-        <div className=" flex-col flex items-center justify-center w-full  bg-gradient-to-b from-custom2 via-custom1 to-transparent rounded-xl relative p-1 mb-32 z-[-22]">
-          <header className="absolute bg-[#1F1D2B]  -top-5 xl:-top-8 px-1">
-            <div className=" bg-gradient-to-r   from-purple-600 to-blue-800 text-transparent bg-clip-text z-30">
-              <h2 className="text-3xl xl:text-5xl font-semibold">Pilares</h2>
-            </div>
-          </header>
+      <div id="pilares">
+        <section className="mt-32 max-w-[80rem] mx-4 ">
+          <div className=" flex-col flex items-center justify-center w-full  bg-gradient-to-b from-custom2 via-custom1 to-transparent rounded-xl relative p-1 mb-32 z-[-22]">
+            <header className="absolute bg-[#1F1D2B]  -top-5 xl:-top-8 px-1">
+              <div className=" bg-gradient-to-r   from-purple-600 to-blue-800 text-transparent bg-clip-text z-30">
+                <h2 className="text-3xl xl:text-5xl font-semibold">Pilares</h2>
+              </div>
+            </header>
 
-          <div className="flex flex-col w-full ">
-            <div className="bg-[#1F1D2B] py-5 px-4  xl:py-10 xl:px-5 rounded-t-xl ">
-              <p className="xl:text-3xl text-white/80 text-center">
-                Os pilares que sustentam o formato inovador de aprendizagem do
-                Union é a junção de incríveis metodologias!
-              </p>
-            </div>
+            <div className="flex flex-col w-full ">
+              <div className="bg-[#1F1D2B] py-5 px-4  xl:py-10 xl:px-5 rounded-t-xl ">
+                <p className="xl:text-3xl text-white/80 text-center">
+                  Os pilares que sustentam o formato inovador de aprendizagem do
+                  Union é a junção de incríveis metodologias!
+                </p>
+              </div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-3 gap-10  px-5 xl:px-0 bg-[#1F1D2B] pt-[6rem] -m-[0.25rem] relative ">
-              {/* cards */}
-              {pilars.map((content) => (
-                <div className="w-full flex flex-col h-full ">
-                  <header className="bg-gradient-to-r h-32 w-full from-custom2 to-custom1 flex items-center justify-center rounded-t-xl">
-                    <h1 className="text-4xl text-white/80 font-bold">
-                      {content.header}
-                    </h1>
-                  </header>
-                  <section className=" bg-myGradient w-full rounded-b-xl flex-grow ">
-                    <div className="flex p-5">
-                      <p className="text-lg text-center text-white/80  ">
-                        {content.text}
-                      </p>
-                    </div>
-                  </section>
-                </div>
-              ))}
+              <div className="grid grid-cols-1 xl:grid-cols-3 gap-10  px-5 xl:px-0 bg-[#1F1D2B] pt-[6rem] -m-[0.25rem] relative ">
+                {/* cards */}
+                {pilars.map((content) => (
+                  <div className="teste  w-full flex flex-col h-full ">
+                    <header className=" bg-gradient-to-r h-32 w-full from-custom2 to-custom1 flex items-center justify-center rounded-t-xl">
+                      <h1 className="text-4xl text-white/80 font-bold">
+                        {content.header}
+                      </h1>
+                    </header>
+                    <section className=" bg-myGradient w-full rounded-b-xl flex-grow ">
+                      <div className="flex p-5">
+                        <p className="text-lg text-center text-white/80  ">
+                          {content.text}
+                        </p>
+                      </div>
+                    </section>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/*seção dos benefícios */}
-      <section className="w-full max-w-[80rem]  flex flex-col mt-[5rem] ">
-        <div className="flex items-center justify-center w-full gap-5 xl:gap-10">
-          <div className="bg-gradient-to-r from-custom2 to-custom1 w-full h-1 mt-1 xl:mt-2 flex items-center justify-center  rounded-xl"></div>
-          <h2 className="  text-3xl xl:text-5xl font-bold bg-gradient-to-r from-purple-600  to-blue-800 text-transparent bg-clip-text ">
-            Benefícios
-          </h2>
-          <div className="bg-gradient-to-r from-custom2 to-custom1 w-full h-1 flex items-center justify-center mt-1 xl:mt-2  rounded-xl"></div>
-        </div>
-        <p className=" text-xl xl:text-3xl text-center max-w-4xl text-white/80 mx-auto mt-6">
-          Conheça os benefícios incríveis que o Union proporciona para seus
-          membros!
-        </p>
+      <div id="beneficios" className="w-full max-w-[80rem]  flex flex-col mt-[5rem] ">
+        <section >
+          <div className="flex items-center justify-center w-full gap-5 xl:gap-10">
+            <div className="bg-gradient-to-r from-custom2 to-custom1 w-full h-1 mt-1 xl:mt-2 flex items-center justify-center  rounded-xl"></div>
+            <h2 className="  text-3xl xl:text-5xl font-bold bg-gradient-to-r from-purple-600  to-blue-800 text-transparent bg-clip-text ">
+              Benefícios
+            </h2>
+            <div className="bg-gradient-to-r from-custom2 to-custom1 w-full h-1 flex items-center justify-center mt-1 xl:mt-2  rounded-xl"></div>
+          </div>
+          <p className=" text-xl xl:text-3xl text-center max-w-4xl text-white/80 mx-auto mt-6">
+            Conheça os benefícios incríveis que o Union proporciona para seus
+            membros!
+          </p>
 
-        <div className="mt-20">
-          {/*area dos beneficios onde ficarão um abaixo do outro */}
-          <div className="flex-col  flex gap-20">
-            {/*Item esquerda */}
-            <div className="w-full flex-col flex xl:flex xl:flex-row gap-5 items-center text-center xl:text-start  ">
-              <div className="w-fit">
-                <Image className="xl:w-40" src={Rocket} alt="TESTE" />
+          <div className="mt-20">
+            {/*area dos beneficios onde ficarão um abaixo do outro */}
+            <div className="flex-col  flex gap-20">
+              {/*Item esquerda */}
+              <div className="w-full flex-col flex xl:flex xl:flex-row gap-5 items-center text-center xl:text-start  ">
+                <div className="w-fit">
+                  <Image className="xl:w-40" src={Rocket} alt="TESTE" />
+                </div>
+                <div className="flex flex-col xl:max-w-3xl gap-5 ">
+                  <h2 className="text-2xl xl:text-4xl font-bold text-white/80">
+                    Preparação para o mercado
+                  </h2>
+                  <p className="text-xl text-center xl:text-left  xl:text-2xl max-w-xl text-white/80">
+                    Os membros são equipados com uma compreensão profunda das
+                    práticas de mercado, permitindo-lhes ingressar no setor com
+                    confiança e conhecimento.
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col xl:max-w-3xl gap-5 ">
-                <h2 className="text-2xl xl:text-4xl font-bold text-white/80">
-                  Preparação para o mercado
-                </h2>
-                <p className="text-xl text-center xl:text-left  xl:text-2xl max-w-xl text-white/80">
-                  Os membros são equipados com uma compreensão profunda das
-                  práticas de mercado, permitindo-lhes ingressar no setor com
-                  confiança e conhecimento.
-                </p>
-              </div>
-            </div>
-            {/*Item esquerda */}
+              {/*Item esquerda */}
 
-            {/*Item direita */}
-            <div className="w-full flex flex-col xl:flex xl:flex-row-reverse gap-5 items-center   ">
-              <div className="w-fit ">
-                <Image className="xl:w-40" src={Vector} alt="TESTE" />
+              {/*Item direita */}
+              <div className="w-full flex flex-col xl:flex xl:flex-row-reverse gap-5 items-center   ">
+                <div className="w-fit ">
+                  <Image className="xl:w-40" src={Vector} alt="TESTE" />
+                </div>
+                <div className="flex flex-col xl:max-w-3xl gap-5 ">
+                  <h2 className="text-2xl xl:text-4xl font-bold text-center xl:text-right text-white/80">
+                    Aprendizado de novas tecnologias e ferramentas
+                  </h2>
+                  <p className=" text-xl xl:text-2xl text-white/80 text-center xl:text-right">
+                    Os membros são expostos a uma variedade de tecnologias e
+                    ferramentas relevantes, expandindo suas habilidades e
+                    conhecimentos.
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col xl:max-w-3xl gap-5 ">
-                <h2 className="text-2xl xl:text-4xl font-bold text-center xl:text-right text-white/80">
-                  Aprendizado de novas tecnologias e ferramentas
-                </h2>
-                <p className=" text-xl xl:text-2xl text-white/80 text-center xl:text-right">
-                  Os membros são expostos a uma variedade de tecnologias e
-                  ferramentas relevantes, expandindo suas habilidades e
-                  conhecimentos.
-                </p>
-              </div>
-            </div>
-            {/*Item direita */}
+              {/*Item direita */}
 
-            <div className="w-full flex-col flex xl:flex xl:flex-row gap-5 items-center text-center xl:text-start  ">
-              <div className="w-fit">
-                <Image className="xl:w-40" src={Controller} alt="TESTE" />
+              <div className="w-full flex-col flex xl:flex xl:flex-row gap-5 items-center text-center xl:text-start  ">
+                <div className="w-fit">
+                  <Image className="xl:w-40" src={Controller} alt="TESTE" />
+                </div>
+                <div className="flex flex-col xl:max-w-3xl gap-5 ">
+                  <h2 className="text-2xl xl:text-4xl font-bold text-white/80">
+                    Desenvolvimento de hard skills
+                  </h2>
+                  <p className="text-xl text-center xl:text-left  xl:text-2xl max-w-2xl text-white/80">
+                    Através de projetos reais, os membros fortalecem suas
+                    habilidades técnicas, aumentando sua capacidade de
+                    contribuir de forma eficaz em ambientes profissionais.
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col xl:max-w-3xl gap-5 ">
-                <h2 className="text-2xl xl:text-4xl font-bold text-white/80">
-                  Desenvolvimento de hard skills
-                </h2>
-                <p className="text-xl text-center xl:text-left  xl:text-2xl max-w-2xl text-white/80">
-                  Através de projetos reais, os membros fortalecem suas
-                  habilidades técnicas, aumentando sua capacidade de contribuir
-                  de forma eficaz em ambientes profissionais.
-                </p>
-              </div>
-            </div>
 
-            <div className="w-full flex flex-col xl:flex xl:flex-row-reverse gap-5 items-center   ">
-              <div className="w-fit ">
-                <Image className="xl:w-40" src={Star} alt="TESTE" />
+              <div className="w-full flex flex-col xl:flex xl:flex-row-reverse gap-5 items-center   ">
+                <div className="w-fit ">
+                  <Image className="xl:w-40" src={Star} alt="TESTE" />
+                </div>
+                <div className="flex flex-col xl:max-w-3xl gap-5 ">
+                  <h2 className="text-2xl xl:text-4xl font-bold text-center xl:text-right text-white/80">
+                    Desenvolvimento de soft skills
+                  </h2>
+                  <p className=" text-xl xl:text-2xl text-white/80 text-center xl:text-right">
+                    Além das competências técnicas, os membros aprimoram
+                    habilidades interpessoais cruciais, como comunicação eficaz,
+                    resolução de conflitos e trabalho em equipe.
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col xl:max-w-3xl gap-5 ">
-                <h2 className="text-2xl xl:text-4xl font-bold text-center xl:text-right text-white/80">
-                  Desenvolvimento de soft skills
-                </h2>
-                <p className=" text-xl xl:text-2xl text-white/80 text-center xl:text-right">
-                  Além das competências técnicas, os membros aprimoram
-                  habilidades interpessoais cruciais, como comunicação eficaz,
-                  resolução de conflitos e trabalho em equipe.
-                </p>
-              </div>
-            </div>
 
-            <div className="w-full flex-col flex xl:flex xl:flex-row gap-5 items-center text-center xl:text-start  ">
-              <div className="w-fit">
-                <Image className="xl:w-40" src={Planet} alt="TESTE" />
+              <div className="w-full flex-col flex xl:flex xl:flex-row gap-5 items-center text-center xl:text-start  ">
+                <div className="w-fit">
+                  <Image className="xl:w-40" src={Planet} alt="TESTE" />
+                </div>
+                <div className="flex flex-col xl:max-w-3xl gap-5 ">
+                  <h2 className="text-2xl xl:text-4xl font-bold text-white/80">
+                    Ambiente imersivo
+                  </h2>
+                  <p className="text-xl text-center xl:text-left  xl:text-2xl max-w-xl text-white/80">
+                    O Union oferece uma oportunidade única de aplicar
+                    conhecimentos teóricos em cenários do mundo real,
+                    proporcionando uma experiência diferenciada e valiosa.
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col xl:max-w-3xl gap-5 ">
-                <h2 className="text-2xl xl:text-4xl font-bold text-white/80">
-                  Ambiente imersivo
-                </h2>
-                <p className="text-xl text-center xl:text-left  xl:text-2xl max-w-xl text-white/80">
-                  O Union oferece uma oportunidade única de aplicar
-                  conhecimentos teóricos em cenários do mundo real,
-                  proporcionando uma experiência diferenciada e valiosa.
-                </p>
-              </div>
-            </div>
 
-            <div className="w-full flex flex-col xl:flex xl:flex-row-reverse gap-5 items-center   ">
-              <div className="w-fit ">
-                <Image className="xl:w-40" src={Like} alt="TESTE" />
+              <div className="w-full flex flex-col xl:flex xl:flex-row-reverse gap-5 items-center   ">
+                <div className="w-fit ">
+                  <Image className="xl:w-40" src={Like} alt="TESTE" />
+                </div>
+                <div className="flex flex-col xl:max-w-3xl gap-5 ">
+                  <h2 className="text-2xl xl:text-4xl font-bold text-center xl:text-right text-white/80">
+                    Networking
+                  </h2>
+                  <p className=" text-xl xl:text-2xl text-white/80 text-center xl:text-right">
+                    A participação no Union expande sua rede de contatos,
+                    abrindo portas para colaborações futuras e oportunidades
+                    profissionais.
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col xl:max-w-3xl gap-5 ">
-                <h2 className="text-2xl xl:text-4xl font-bold text-center xl:text-right text-white/80">
-                  Networking
-                </h2>
-                <p className=" text-xl xl:text-2xl text-white/80 text-center xl:text-right">
-                  A participação no Union expande sua rede de contatos, abrindo
-                  portas para colaborações futuras e oportunidades
-                  profissionais.
-                </p>
-              </div>
-            </div>
 
-            <div className="w-full flex-col flex xl:flex xl:flex-row gap-5 items-center text-center xl:text-start  ">
-              <div className="w-fit">
-                <Image className="xl:w-40" src={Lamp} alt="TESTE" />
+              <div className="w-full flex-col flex xl:flex xl:flex-row gap-5 items-center text-center xl:text-start  ">
+                <div className="w-fit">
+                  <Image className="xl:w-40" src={Lamp} alt="TESTE" />
+                </div>
+                <div className="flex flex-col xl:max-w-3xl gap-5 ">
+                  <h2 className="text-2xl xl:text-4xl font-bold text-white/80">
+                    Domínio de metodologias ágeis
+                  </h2>
+                  <p className="text-xl text-center xl:text-left  xl:text-2xl max-w-xl text-white/80">
+                    Através da vivência prática, os membros aprendem a aplicar
+                    metodologias ágeis como Scrum, preparando-os para ambientes
+                    de trabalho colaborativos.
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col xl:max-w-3xl gap-5 ">
-                <h2 className="text-2xl xl:text-4xl font-bold text-white/80">
-                  Domínio de metodologias ágeis
-                </h2>
-                <p className="text-xl text-center xl:text-left  xl:text-2xl max-w-xl text-white/80">
-                  Através da vivência prática, os membros aprendem a aplicar
-                  metodologias ágeis como Scrum, preparando-os para ambientes de
-                  trabalho colaborativos.
-                </p>
-              </div>
-            </div>
 
-            <div className="w-full flex flex-col xl:flex xl:flex-row-reverse gap-5 items-center   ">
-              <div className="w-fit ">
-                <Image className="xl:w-40" src={Profile} alt="TESTE" />
-              </div>
-              <div className="flex flex-col xl:max-w-3xl gap-5 ">
-                <h2 className="text-2xl xl:text-4xl font-bold text-center xl:text-right text-white/80">
-                  Mentoria
-                </h2>
-                <p className=" text-xl xl:text-2xl text-white/80 text-center xl:text-right">
-                  Os mentores experientes oferecem orientação valiosa,
-                  proporcionando uma trajetória de aprendizado mais suave e
-                  eficiente.
-                </p>
+              <div className="w-full flex flex-col xl:flex xl:flex-row-reverse gap-5 items-center   ">
+                <div className="w-fit ">
+                  <Image className="xl:w-40" src={Profile} alt="TESTE" />
+                </div>
+                <div className="flex flex-col xl:max-w-3xl gap-5 ">
+                  <h2 className="text-2xl xl:text-4xl font-bold text-center xl:text-right text-white/80">
+                    Mentoria
+                  </h2>
+                  <p className=" text-xl xl:text-2xl text-white/80 text-center xl:text-right">
+                    Os mentores experientes oferecem orientação valiosa,
+                    proporcionando uma trajetória de aprendizado mais suave e
+                    eficiente.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/*seção das etapas*/}
-      <section className="w-full max-w-[80rem]  flex flex-col mt-[5rem] px-10 ">
+      <div id="etapas" className="w-full max-w-[80rem]  flex flex-col mt-[5rem] px-10 ">
+      <section>
         <div className="flex items-center  justify-center w-full gap-5 xl:gap-10">
           <div className="bg-gradient-to-r from-custom2 to-custom1 w-full h-1 mt-1 xl:mt-2 flex items-center justify-center  rounded-xl"></div>
           <h2 className="  text-3xl xl:text-5xl font-bold bg-gradient-to-r from-purple-600  to-blue-800 text-transparent bg-clip-text ">
@@ -355,6 +361,8 @@ export function About() {
           <div className="w-[0.32rem] h-[160%] xl:h-[calc(100%_-_8.2rem)] absolute bg-test top-0  z-[-9999]  left-1/2 right-1/2"></div>
         </div>
       </section>
+      </div>
+     
 
       <section className="w-full mx-auto bg-[url(https://media.graphassets.com/zqzyqOSd6RG6uFM2Rdgx)] bg-cover ">
         <div className=" w-full max-w-7xl  mx-auto">
