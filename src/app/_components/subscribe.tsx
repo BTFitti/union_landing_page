@@ -145,7 +145,7 @@ export function Subscribe() {
   }
 
   return (
-    <div className="px-5">
+    <div id="subscribe" className="px-5">
       <section className="mt-56 mx-auto h-full pt-10 justify-between items-center xl:p-20 px-2 flex w-full max-w-[80rem] mb-10 rounded-xl gap-5 flex-col bg-test3  text-white">
         {!showForm ? (
           <>

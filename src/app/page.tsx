@@ -6,7 +6,7 @@ import { Faq } from "./_components/faq";
 import { Footer } from "./_components/footer";
 export default function Home() {
   return (
-    <div>
+    <div className="scroll-smooth">
       <Hero />
       <About />
       <Testimonials />
